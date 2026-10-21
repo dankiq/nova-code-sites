@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CSV Insight · sample.csv</title>
+<style>
+:root{--bg:#090c10;--panel:#11161d;--line:#29313b;--text:#f3f5f6;--muted:#8d98a6;--accent:#b9ff43;--cyan:#61d6ff}*{box-sizing:border-box}body{margin:0;color:var(--text);background:radial-gradient(circle at 80% 0,rgba(185,255,67,.09),transparent 29%),var(--bg);font-family:Inter,system-ui,sans-serif}.shell{width:min(1320px,calc(100% - 32px));margin:auto;padding:32px 0 70px}header{display:flex;align-items:center;justify-content:space-between;padding:0 0 28px;border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:12px}.logo{width:44px;height:44px;display:grid;place-items:center;border-radius:13px;color:#10150a;background:var(--accent);font-weight:950}.brand strong,.brand small{display:block}.brand small,.meta{color:var(--muted);font-size:11px}.badge{padding:7px 10px;border:1px solid #40502a;border-radius:99px;color:var(--accent);font-size:10px;font-weight:800}.hero{padding:62px 0 36px;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:end}.eyebrow{color:var(--accent);font-size:10px;font-weight:900;letter-spacing:.16em}h1{max-width:10ch;margin:9px 0 15px;font-size:clamp(44px,7vw,90px);line-height:.88;letter-spacing:-.07em}.hero p{max-width:580px;color:var(--muted);line-height:1.6}.score{width:150px;height:150px;display:grid;place-content:center;border:1px solid #455a2c;border-radius:50%;text-align:center;background:radial-gradient(circle,rgba(185,255,67,.13),transparent 67%)}.score strong{font-size:48px;line-height:1}.score small{color:var(--muted)}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.metric{padding:20px;border:1px solid var(--line);border-radius:15px;background:var(--panel)}.metric span,.column-card small{color:var(--muted);font-size:9px;letter-spacing:.11em}.metric strong{display:block;margin-top:9px;font-size:28px}.section-title{margin:55px 0 16px;display:flex;align-items:end;justify-content:space-between}.section-title h2{margin:0;font-size:28px;letter-spacing:-.04em}.columns{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.column-card{padding:20px;border:1px solid var(--line);border-radius:16px;background:var(--panel)}.column-head{display:flex;justify-content:space-between;gap:15px}h3{margin:4px 0 0;font-size:16px}.type{height:max-content;padding:5px 7px;border-radius:7px;color:var(--cyan);background:rgba(97,214,255,.08);font-size:9px}.column-stats{margin-top:21px;display:flex;gap:20px;color:var(--muted);font-size:10px}.column-stats b{color:var(--text);font-size:15px}.bar{height:4px;margin:10px 0 18px;overflow:hidden;border-radius:9px;background:#080b0f}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--cyan))}.range{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;padding:11px;border-radius:10px;background:#0b0f14}.range span{color:var(--muted);font-size:8px}.range b{display:block;margin-top:4px;color:var(--text);font-size:10px}h4{margin:18px 0 8px;color:var(--muted);font-size:9px;text-transform:uppercase;letter-spacing:.1em}ul{margin:0;padding:0;list-style:none}li{padding:6px 0;display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid #20262e;font-size:10px}li span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}li strong{color:var(--accent)}.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:16px}table{width:100%;border-collapse:collapse;background:var(--panel);font-size:11px}th,td{max-width:240px;padding:13px 15px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}th{color:var(--muted);background:#0d1116;font-size:9px}footer{margin-top:35px;color:var(--muted);font-size:10px}@media(max-width:900px){.columns{grid-template-columns:1fr 1fr}.metrics{grid-template-columns:1fr 1fr}}@media(max-width:600px){.hero{grid-template-columns:1fr}.score{width:110px;height:110px}.columns{grid-template-columns:1fr}}
+</style><link rel="icon" href="/nova-code-sites/nova-code-portfolio/favicon.svg"><script src="/nova-code-sites/nova-code-portfolio/static-navigation.js"></script></head><body><main class="shell"><header><div class="brand"><span class="logo">CSV</span><span><strong>CSV Insight</strong><small>zero-dependency profiler · NOVA CODE</small></span></div><span class="badge">REPORT READY</span></header>
+<section class="hero"><div><span class="eyebrow">DATA QUALITY REPORT</span><h1>sample.csv</h1><p>Автоматический профиль структуры, заполненности и повторов. Отчёт не отправляет данные во внешние сервисы.</p><div class="meta">SHA256 7bd2bf4160e0 · utf-8-sig · разделитель «,»</div></div><div class="score"><strong>95</strong><small>качество / 100</small></div></section>
+<section class="metrics"><div class="metric"><span>СТРОК</span><strong>12</strong></div><div class="metric"><span>КОЛОНОК</span><strong>7</strong></div><div class="metric"><span>ПРОПУСКОВ</span><strong>3</strong></div><div class="metric"><span>ДУБЛИКАТОВ</span><strong>1</strong></div></section>
+<div class="section-title"><h2>Профиль колонок</h2><span class="meta">7 параметров</span></div><section class="columns">
+          <article class="column-card">
+            <div class="column-head"><div><small>КОЛОНКА</small><h3>order_id</h3></div><span class="type">number</span></div>
+            <div class="column-stats"><span><b>11</b> уникальных</span><span><b>0.0%</b> пропусков</span></div>
+            <div class="bar"><i style="width:100.0%"></i></div>
+            <div class="range"><span>min <b>1 001.00</b></span><span>avg <b>1 006.33</b></span><span>max <b>1 011.00</b></span></div>
+            <h4>Частые значения</h4><ul><li><span>1010</span><strong>2</strong></li><li><span>1001</span><strong>1</strong></li><li><span>1002</span><strong>1</strong></li></ul>
+          </article>
+          <article class="column-card">
+            <div class="column-head"><div><small>КОЛОНКА</small><h3>city</h3></div><span class="type">text</span></div>
+            <div class="column-stats"><span><b>4</b> уникальных</span><span><b>0.0%</b> пропусков</span></div>
+            <div class="bar"><i style="width:100.0%"></i></div>
+            
+            <h4>Частые значения</h4><ul><li><span>Москва</span><strong>4</strong></li><li><span>Казань</span><strong>3</strong></li><li><span>Пермь</span><strong>3</strong></li></ul>
+          </article>
+          <article class="column-card">
+            <div class="column-head"><div><small>КОЛОНКА</small><h3>channel</h3></div><span class="type">text</span></div>
+            <div class="column-stats"><span><b>4</b> уникальных</span><span><b>0.0%</b> пропусков</span></div>
+            <div class="bar"><i style="width:100.0%"></i></div>
+            
+            <h4>Частые значения</h4><ul><li><span>Сайт</span><strong>4</strong></li><li><span>Telegram</span><strong>4</strong></li><li><span>VK</span><strong>2</strong></li></ul>
+          </article>
+          <article class="column-card">
+            <div class="column-head"><div><small>КОЛОНКА</small><h3>revenue</h3></div><span class="type">number</span></div>
+            <div class="column-stats"><span><b>10</b> уникальных</span><span><b>8.3%</b> пропусков</span></div>
+            <div class="bar"><i style="width:91.7%"></i></div>
+            <div class="range"><span>min <b>42 000.00</b></span><span>avg <b>84 909.09</b></span><span>max <b>145 000.00</b></span></div>
+            <h4>Частые значения</h4><ul><li><span>74000</span><strong>2</strong></li><li><span>125000</span><strong>1</strong></li><li><span>56000</span><strong>1</strong></li></ul>
+          </article>
+          <article class="column-card">
+            <div class="column-head"><div><small>КОЛОНКА</small><h3>cost</h3></div><span class="type">number</span></div>
+            <div class="column-stats"><span><b>10</b> уникальных</span><span><b>8.3%</b> пропусков</span></div>
+            <div class="bar"><i style="width:91.7%"></i></div>
+            <div class="range"><span>min <b>18 000.00</b></span><span>avg <b>45 454.55</b></span><span>max <b>81 000.00</b></span></div>
+            <h4>Частые значения</h4><ul><li><span>39000</span><strong>2</strong></li><li><span>72000</span><strong>1</strong></li><li><span>31000</span><strong>1</strong></li></ul>
+          </article>
+          <article class="column-card">
+            <div class="column-head"><div><small>КОЛОНКА</small><h3>status</h3></div><span class="type">text</span></div>
+            <div class="column-stats"><span><b>3</b> уникальных</span><span><b>0.0%</b> пропусков</span></div>
+            <div class="bar"><i style="width:100.0%"></i></div>
+            
+            <h4>Частые значения</h4><ul><li><span>Оплачен</span><strong>7</strong></li><li><span>В работе</span><strong>3</strong></li><li><span>Новый</span><strong>2</strong></li></ul>
+          </article>
+          <article class="column-card">
+            <div class="column-head"><div><small>КОЛОНКА</small><h3>manager</h3></div><span class="type">text</span></div>
+            <div class="column-stats"><span><b>3</b> уникальных</span><span><b>8.3%</b> пропусков</span></div>
+            <div class="bar"><i style="width:91.7%"></i></div>
+            
+            <h4>Частые значения</h4><ul><li><span>Анна</span><strong>4</strong></li><li><span>Артём</span><strong>4</strong></li><li><span>Илья</span><strong>3</strong></li></ul>
+          </article></section>
+<div class="section-title"><h2>Предпросмотр данных</h2><span class="meta">первые 6 строк</span></div><div class="table-wrap"><table><thead><tr><th>order_id</th><th>city</th><th>channel</th><th>revenue</th><th>cost</th><th>status</th><th>manager</th></tr></thead><tbody><tr><td>1001</td><td>Москва</td><td>Сайт</td><td>125000</td><td>72000</td><td>Оплачен</td><td>Анна</td></tr><tr><td>1002</td><td>Киров</td><td>Telegram</td><td>56000</td><td>31000</td><td>Оплачен</td><td>Илья</td></tr><tr><td>1003</td><td>Казань</td><td>VK</td><td>83000</td><td>46000</td><td>В работе</td><td>Анна</td></tr><tr><td>1004</td><td>Москва</td><td>Сайт</td><td>145000</td><td>81000</td><td>Оплачен</td><td>Артём</td></tr><tr><td>1005</td><td>Пермь</td><td>Рекомендация</td><td>42000</td><td>18000</td><td>Новый</td><td>Илья</td></tr><tr><td>1006</td><td>Казань</td><td>Сайт</td><td>97000</td><td>53000</td><td>Оплачен</td><td>Анна</td></tr></tbody></table></div>
+<footer>Сформировано CSV Insight · NOVA CODE · 2026-07-18T12:47:24.746398+00:00</footer></main></body></html>

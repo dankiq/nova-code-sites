@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TabTamer</title>
+    <link rel="stylesheet" href="popup.css" />
+  <link rel="icon" href="/nova-code-sites/nova-code-portfolio/favicon.svg"><script src="/nova-code-sites/nova-code-portfolio/static-navigation.js"></script></head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <div class="logo"><span></span><span></span><span></span></div>
+        <div class="brand"><strong>TabTamer</strong><small>NOVA CODE utility</small></div>
+        <div class="mode" id="modeBadge">LIVE</div>
+      </header>
+
+      <section class="overview">
+        <div>
+          <span class="eyebrow">ТЕКУЩЕЕ ОКНО</span>
+          <h1><strong id="tabCount">0</strong> вкладок</h1>
+          <p id="summary">Сканируем рабочее пространство...</p>
+        </div>
+        <div class="score"><span id="score">0</span><small>порядок</small></div>
+      </section>
+
+      <section class="quick-grid">
+        <button class="action action--primary" id="groupButton" type="button">
+          <span class="action__icon">⌘</span><strong>Сгруппировать</strong><small>по сайтам</small>
+        </button>
+        <button class="action" id="duplicateButton" type="button">
+          <span class="action__icon">≡</span><strong>Убрать повторы</strong><small id="duplicateLabel">дубликатов нет</small>
+        </button>
+        <button class="action" id="saveButton" type="button">
+          <span class="action__icon">＋</span><strong>Сохранить</strong><small>текущую сессию</small>
+        </button>
+        <button class="action" id="restoreButton" type="button">
+          <span class="action__icon">↗</span><strong>Вернуть</strong><small>последнюю сессию</small>
+        </button>
+      </section>
+
+      <section class="groups-section">
+        <div class="section-title"><span>ГРУППЫ</span><small id="groupCount">0 доменов</small></div>
+        <div class="groups" id="groups"></div>
+      </section>
+
+      <footer><span class="status-dot"></span><span id="status">Готово к работе</span><button id="refreshButton" type="button">Обновить</button></footer>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

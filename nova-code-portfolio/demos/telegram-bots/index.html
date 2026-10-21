@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Telegram Bot Lab · NOVA CODE</title>
+  <meta name="description" content="Интерактивное демо четырёх Telegram-ботов NOVA CODE.">
+  <link rel="stylesheet" href="styles.css">
+  <style>.composer .send:disabled{color:#52635c;cursor:default;opacity:.55}#scenario-list{scrollbar-width:none}#scenario-list::-webkit-scrollbar{display:none}</style>
+<link rel="icon" href="/nova-code-sites/nova-code-portfolio/favicon.svg"><script src="/nova-code-sites/nova-code-portfolio/static-navigation.js"></script></head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/nova-code-sites/nova-code-portfolio/telegram-bots/"><b>N/C</b><span>TELEGRAM BOT LAB</span></a>
+    <div class="runtime"><i></i> browser demo · данные не отправляются</div>
+    <a class="source-link" href="/nova-code-sites/nova-code-portfolio/downloads/twin-code-telegram-starter.zip" download>Starter-kit ↗</a>
+  </header>
+
+  <main class="lab-shell">
+    <aside class="scenario-panel">
+      <div class="panel-label"><span>01</span> СЦЕНАРИИ</div>
+      <h1>Четыре бота.<br>Один рабочий движок.</h1>
+      <p>Выберите задачу и пройдите диалог так, как его увидит реальный пользователь в Telegram.</p>
+      <nav id="scenario-list" aria-label="Выбор Telegram-бота"></nav>
+    </aside>
+
+    <section class="phone-stage" aria-label="Интерактивное превью бота">
+      <div class="phone">
+        <div class="telegram-head">
+          <button class="back" type="button" aria-label="Назад">‹</button>
+          <div class="avatar" id="avatar">LP</div>
+          <div><strong id="bot-name">LeadPilot</strong><span id="bot-user">@leadpilot_demo_bot</span></div>
+          <button class="dots" type="button" aria-label="Меню">•••</button>
+        </div>
+        <div class="chat" id="chat" aria-live="polite"></div>
+        <form class="composer" id="composer">
+          <button type="button" aria-label="Прикрепить файл">⌕</button>
+          <input id="message-input" placeholder="Сообщение" autocomplete="off" disabled>
+          <button class="send" id="send-button" type="submit" aria-label="Отправить" disabled>➤</button>
+        </form>
+      </div>
+    </section>
+
+    <aside class="inspector">
+      <div class="panel-label"><span>02</span> ПОД КАПОТОМ</div>
+      <div class="status-card"><i></i><span>DEMO READY</span><b id="progress">0 / 4</b></div>
+      <dl>
+        <div><dt>Framework</dt><dd>aiogram 3</dd></div>
+        <div><dt>State</dt><dd>FSM</dd></div>
+        <div><dt>Storage</dt><dd>SQLite</dd></div>
+        <div><dt>Delivery</dt><dd>polling / webhook</dd></div>
+      </dl>
+      <div class="flow-map">
+        <span>START</span><i></i><span>STEPS</span><i></i><span>DB</span><i></i><span>ADMIN</span>
+      </div>
+      <div class="inspector-copy">
+        <small id="scenario-kind">LEAD QUALIFICATION</small>
+        <h2 id="scenario-title">Заявка становится структурированным лидом.</h2>
+        <p id="scenario-description">Ответы сохраняются в базе и могут сразу уходить менеджеру отдельной карточкой.</p>
+      </div>
+      <button class="restart" id="restart" type="button">Начать сценарий заново</button>
+    </aside>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

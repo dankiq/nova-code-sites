@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="InvoiceFlow — быстрый конструктор счетов от NOVA CODE." />
+    <title>InvoiceFlow · NOVA CODE</title>
+    <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="/nova-code-sites/nova-code-portfolio/favicon.svg"><script src="/nova-code-sites/nova-code-portfolio/static-navigation.js"></script></head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="InvoiceFlow">
+        <span class="brand__mark">IF</span>
+        <span><strong>InvoiceFlow</strong><small>by NOVA CODE</small></span>
+      </a>
+      <div class="topbar__actions">
+        <button class="button button--ghost" id="exportButton" type="button">Экспорт JSON</button>
+        <button class="button button--accent" id="printButton" type="button">Скачать PDF</button>
+      </div>
+    </header>
+
+    <main id="top" class="workspace">
+      <aside class="panel controls">
+        <div class="eyebrow">Настройки документа</div>
+        <h1>Счёт без таблиц и рутины</h1>
+        <p class="lead">Заполните данные, добавьте позиции и сохраните готовый документ через печать в PDF.</p>
+
+        <section class="form-section">
+          <h2>Документ</h2>
+          <div class="form-grid form-grid--two">
+            <label>Номер<input id="invoiceNumber" value="TC-024" /></label>
+            <label>Дата<input id="invoiceDate" type="date" /></label>
+            <label>Валюта<select id="currency"><option value="₽">RUB ₽</option><option value="$">USD $</option><option value="€">EUR €</option></select></label>
+            <label>Срок оплаты<input id="paymentDays" type="number" min="0" value="7" /></label>
+          </div>
+        </section>
+
+        <section class="form-section">
+          <h2>Исполнитель</h2>
+          <div class="form-grid">
+            <label>Название<input id="sellerName" value="NOVA CODE" /></label>
+            <label>Реквизиты<textarea id="sellerDetails" rows="3">Самозанятый Артём
+ИНН 000000000000
+Telegram: @twincode_dev</textarea></label>
+          </div>
+        </section>
+
+        <section class="form-section">
+          <h2>Заказчик</h2>
+          <div class="form-grid">
+            <label>Компания или имя<input id="clientName" value="ООО «Новый проект»" /></label>
+            <label>Контакты<textarea id="clientDetails" rows="3">hello@example.ru
+Киров, Россия</textarea></label>
+          </div>
+        </section>
+
+        <section class="form-section">
+          <h2>Расчёт</h2>
+          <div class="form-grid form-grid--two">
+            <label>Скидка, %<input id="discount" type="number" min="0" max="100" value="0" /></label>
+            <label>Налог, %<input id="tax" type="number" min="0" max="100" value="0" /></label>
+          </div>
+        </section>
+
+        <div class="autosave"><span></span> Изменения сохраняются в браузере</div>
+      </aside>
+
+      <section class="invoice-wrap">
+        <article class="invoice" id="invoice">
+          <div class="invoice__head">
+            <div>
+              <div class="invoice__brand" id="previewSeller">NOVA CODE</div>
+              <div class="muted preline" id="previewSellerDetails"></div>
+            </div>
+            <div class="invoice__meta">
+              <span>СЧЁТ</span>
+              <strong id="previewNumber">TC-024</strong>
+              <small id="previewDate"></small>
+            </div>
+          </div>
+
+          <div class="client-card">
+            <span>ЗАКАЗЧИК</span>
+            <strong id="previewClient"></strong>
+            <p class="preline" id="previewClientDetails"></p>
+          </div>
+
+          <div class="items-head">
+            <h2>Работы и услуги</h2>
+            <button class="add-line" id="addItemButton" type="button">+ Добавить позицию</button>
+          </div>
+
+          <div class="items" id="items"></div>
+
+          <div class="invoice__bottom">
+            <label class="note-label">Комментарий
+              <textarea id="note" rows="4">Спасибо за доверие. Оплата означает согласование объёма работ.</textarea>
+            </label>
+            <div class="totals">
+              <div><span>Подытог</span><strong id="subtotal">0 ₽</strong></div>
+              <div id="discountRow"><span>Скидка</span><strong id="discountTotal">0 ₽</strong></div>
+              <div id="taxRow"><span>Налог</span><strong id="taxTotal">0 ₽</strong></div>
+              <div class="totals__grand"><span>К оплате</span><strong id="grandTotal">0 ₽</strong></div>
+              <small id="dueDate"></small>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <template id="itemTemplate">
+      <div class="item-row">
+        <input class="item-name" aria-label="Название позиции" placeholder="Название работы" />
+        <input class="item-qty" aria-label="Количество" type="number" min="0.1" step="0.1" value="1" />
+        <input class="item-price" aria-label="Цена" type="number" min="0" step="100" value="0" />
+        <strong class="item-total">0 ₽</strong>
+        <button class="remove-item" type="button" aria-label="Удалить позицию">×</button>
+      </div>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>

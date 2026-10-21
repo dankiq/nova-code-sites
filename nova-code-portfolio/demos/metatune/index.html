@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MetaTune — предпросмотр сниппетов</title>
+  <link rel="stylesheet" href="styles.css">
+<link rel="icon" href="/nova-code-sites/nova-code-portfolio/favicon.svg"><script src="/nova-code-sites/nova-code-portfolio/static-navigation.js"></script></head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span>M</span> MetaTune</a>
+    <div class="topbar__status"><i></i> данные остаются в браузере</div>
+    <button class="ghost" id="resetButton">Сбросить</button>
+  </header>
+
+  <main>
+    <section class="intro">
+      <div>
+        <p class="eyebrow">SEO WORKSPACE / NOVA CODE</p>
+        <h1>Настройте сниппет<br><em>до публикации.</em></h1>
+      </div>
+      <p class="intro__copy">Проверьте заголовок, описание и Open Graph-карточку в одном экране. MetaTune сразу подсветит, что стоит сократить или дополнить.</p>
+    </section>
+
+    <section class="workspace">
+      <form class="editor" id="metaForm">
+        <div class="section-head"><span>01</span><div><b>Данные страницы</b><small>Основные метатеги</small></div></div>
+        <label>Название проекта<input id="siteName" value="NOVA CODE"></label>
+        <label>URL страницы<input id="pageUrl" value="/nova-code-sites/nova-code-portfolio/projects/metatune/"></label>
+        <label>Title
+          <textarea id="pageTitle" rows="2">MetaTune — предпросмотр SEO и Open Graph</textarea>
+          <span class="meter"><i id="titleMeter"></i></span><small id="titleCount"></small>
+        </label>
+        <label>Description
+          <textarea id="pageDescription" rows="4">Проверьте, как страница будет выглядеть в поиске и социальных сетях, ещё до публикации.</textarea>
+          <span class="meter"><i id="descriptionMeter"></i></span><small id="descriptionCount"></small>
+        </label>
+        <label>Изображение Open Graph<input id="imageUrl" value="/nova-code-sites/nova-code-portfolio/media/og/metatune.jpg"></label>
+        <div class="checks" id="checks"></div>
+        <button class="primary" type="button" id="copyButton">Скопировать метатеги</button>
+      </form>
+
+      <div class="previews">
+        <div class="preview-nav">
+          <button class="tab active" data-view="search">Google</button>
+          <button class="tab" data-view="social">Open Graph</button>
+          <span id="score">92 / 100</span>
+        </div>
+        <article class="search-card" id="searchView">
+          <div class="search-domain"><span class="favicon">T</span><div><b id="googleSite">NOVA CODE</b><small id="googleUrl"></small></div></div>
+          <h2 id="googleTitle"></h2>
+          <p id="googleDescription"></p>
+        </article>
+        <article class="social-card hidden" id="socialView">
+          <div class="og-art"><div class="og-grid"></div><span>META / PREVIEW</span><strong id="ogArtTitle">MetaTune</strong></div>
+          <div class="og-copy"><small id="ogHost">TWINCODE.ONLINE</small><h2 id="ogTitle"></h2><p id="ogDescription"></p></div>
+        </article>
+        <div class="code-card">
+          <div><span>Сгенерированный код</span><button id="codeCopy">COPY</button></div>
+          <pre id="codePreview"></pre>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div class="toast" id="toast">Скопировано</div>
+  <script src="app.js"></script>
+</body>
+</html>

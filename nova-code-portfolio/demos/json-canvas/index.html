@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON Canvas — разбор данных без загрузки</title>
+  <link rel="stylesheet" href="styles.css">
+<link rel="icon" href="/nova-code-sites/nova-code-portfolio/favicon.svg"><script src="/nova-code-sites/nova-code-portfolio/static-navigation.js"></script></head>
+<body>
+  <header>
+    <div class="logo"><span>{ }</span><b>JSON Canvas</b><small>by NOVA CODE</small></div>
+    <div class="privacy"><i></i> локальная обработка</div>
+    <button id="loadSample">Загрузить пример</button>
+  </header>
+  <main>
+    <section class="headline">
+      <div><p>DEVELOPER TOOL / 2026</p><h1>Данные под контролем.<br><em>До последнего ключа.</em></h1></div>
+      <div class="headline__stats"><span><b id="nodeCount">0</b> узлов</span><span><b id="depthCount">0</b> уровней</span><span><b id="byteCount">0</b> байт</span></div>
+    </section>
+    <section class="app-shell">
+      <div class="pane source-pane">
+        <div class="pane__head"><div><span>01</span><b>Исходный JSON</b></div><div class="actions"><button id="formatButton">Форматировать</button><button id="minifyButton">Сжать</button></div></div>
+        <textarea id="source" spellcheck="false"></textarea>
+        <div class="status" id="status"><i></i><span>Ожидаем данные</span><small>CTRL + ENTER</small></div>
+      </div>
+      <div class="pane result-pane">
+        <div class="pane__head"><div><span>02</span><b>Структура</b></div><div class="actions"><input id="search" placeholder="Найти ключ или значение"><button id="downloadButton">Скачать</button></div></div>
+        <div class="tree" id="tree"></div>
+        <div class="pathbar"><small>Выбранный путь</small><code id="selectedPath">$</code><button id="copyPath">COPY</button></div>
+      </div>
+    </section>
+  </main>
+  <div class="toast" id="toast">Путь скопирован</div>
+  <script src="app.js"></script>
+</body>
+</html>

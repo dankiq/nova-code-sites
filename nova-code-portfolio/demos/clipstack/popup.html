@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClipStack</title>
+  <link rel="stylesheet" href="popup.css">
+<link rel="icon" href="/nova-code-sites/nova-code-portfolio/favicon.svg"><script src="/nova-code-sites/nova-code-portfolio/static-navigation.js"></script></head>
+<body>
+  <main class="app">
+    <header>
+      <div class="brand"><span>C</span><div><b>ClipStack</b><small>быстрые сниппеты</small></div></div>
+      <button class="icon-button" id="exportButton" title="Экспорт">↗</button>
+    </header>
+    <section class="search-row">
+      <label><span>⌕</span><input id="search" placeholder="Найти сниппет…" autocomplete="off"></label>
+      <button id="newButton">＋</button>
+    </section>
+    <nav id="filters"></nav>
+    <section class="list" id="list"></section>
+    <footer><span><i></i><b id="count">0</b> сниппетов</span><kbd>Ctrl Shift V</kbd></footer>
+  </main>
+
+  <dialog id="editorDialog">
+    <form method="dialog" id="editorForm">
+      <div class="dialog-head"><b id="dialogTitle">Новый сниппет</b><button value="cancel">×</button></div>
+      <label>Название<input id="titleInput" required maxlength="50"></label>
+      <label>Тег<input id="tagInput" required maxlength="20" placeholder="Работа"></label>
+      <label>Текст<textarea id="textInput" required rows="7"></textarea></label>
+      <input id="editingId" type="hidden">
+      <div class="dialog-actions"><button value="cancel" class="secondary">Отмена</button><button id="saveButton" value="default">Сохранить</button></div>
+    </form>
+  </dialog>
+  <div class="toast" id="toast">Скопировано</div>
+  <script src="popup.js"></script>
+</body>
+</html>

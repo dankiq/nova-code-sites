@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b1010">
+  <title>Briefly — конструктор брифа</title>
+  <link rel="stylesheet" href="styles.css">
+<link rel="icon" href="/nova-code-sites/nova-code-portfolio/favicon.svg"><script src="/nova-code-sites/nova-code-portfolio/static-navigation.js"></script></head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="#">BRIEFLY<span>/01</span></a>
+      <div class="autosave"><i></i> сохраняется локально</div>
+      <button class="quiet" id="resetButton" type="button">Новый бриф</button>
+    </header>
+
+    <section class="intro">
+      <div><span class="eyebrow">PROJECT INTAKE SYSTEM</span><h1>Соберите задачу<br>до первого созвона.</h1></div>
+      <p>Короткий интерактивный бриф для сайта, приложения или автоматизации. Ничего не отправляется в облако.</p>
+    </section>
+
+    <section class="workspace">
+      <form id="briefForm" class="brief-form">
+        <label><span>Название проекта</span><input name="name" placeholder="Например, кабинет поставщика" autocomplete="off"></label>
+        <div class="two">
+          <label><span>Тип продукта</span><select name="type"><option value="">Выберите</option><option>Сайт</option><option>Интернет-магазин</option><option>Приложение</option><option>Автоматизация</option><option>Расширение</option></select></label>
+          <label><span>Желаемый запуск</span><input name="deadline" type="date"></label>
+        </div>
+        <label><span>Что должно измениться после запуска?</span><textarea name="goal" rows="4" placeholder="Опишите результат для бизнеса или пользователя"></textarea></label>
+        <label><span>Ключевые функции</span><textarea name="features" rows="4" placeholder="Каталог, оплата, роли, отчёты…"></textarea></label>
+        <div class="two">
+          <label><span>Бюджет</span><select name="budget"><option value="">Не определён</option><option>до 50 000 ₽</option><option>50–120 000 ₽</option><option>120–250 000 ₽</option><option>от 250 000 ₽</option></select></label>
+          <label><span>Контакт</span><input name="contact" placeholder="Telegram или почта" autocomplete="off"></label>
+        </div>
+      </form>
+
+      <aside class="summary">
+        <div class="score"><div><span>ГОТОВНОСТЬ</span><strong id="scoreValue">0%</strong></div><div class="ring" id="scoreRing"></div></div>
+        <div class="summary-copy" id="summaryCopy"><small>КРАТКОЕ РЕЗЮМЕ</small><h2>Заполните первые поля</h2><p>Здесь появится сжатое описание задачи, которое удобно отправить команде.</p></div>
+        <dl><div><dt>Формат</dt><dd id="metaType">—</dd></div><div><dt>Запуск</dt><dd id="metaDeadline">—</dd></div><div><dt>Бюджет</dt><dd id="metaBudget">—</dd></div></dl>
+        <button class="primary" id="downloadButton" type="button">Скачать бриф .md <span>↗</span></button>
+      </aside>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
